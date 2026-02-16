@@ -1,0 +1,182 @@
+.flex{
+    display: flex;
+}
+.border{
+    border: 1px solid red;
+}
+section{
+    justify-content: space-between;
+     flex-wrap: wrap;
+   
+}
+/* 
+=====================================
+=====================================
+start  section 
+=====================================
+=====================================
+*/
+section .left-section,
+section .center-section,
+section .right-section
+{
+    margin-left: 1.5rem;
+ 
+   
+
+}
+section .left-section .left-sectionTitle,
+section .center-section .center-sectionTitle,
+section .right-section .right-sectionTitle{
+   margin: 1.47rem;
+   gap: 20px;
+   width: 300px;
+   height: 40px;
+   align-items: center;
+   background: #61606046;
+   justify-content: center;
+   border-radius: 5px;
+}
+section .left-section .Title{
+   font-size:20px ;
+}
+/* 
+=====================================
+=====================================
+start  section 
+=====================================
+=====================================
+*/
+section .center-section .center-sectionTitle{
+     background:rgb(249 115 22);
+
+}
+section .right-section .right-sectionTitle{
+     background:rgb(34 197 94);
+
+}
+
+
+/* 
+=====================================
+=====================================
+start  Add info 
+=====================================
+=====================================
+*/
+
+section .Add-Info{
+position: fixed;
+inset: 0;
+background-color: rgba(10, 10, 10, 0.74);
+padding-top: 5rem;
+z-index: 10001;
+}
+section .Add-Info .forme{
+background-color: rgb(238, 238, 240);
+width: 90%;
+height: 80%;
+margin: auto;
+border-radius: 20px;
+position: relative;
+transition: .2s;
+
+}
+section .Add-Info .forme .delete-button{
+position: absolute;
+right: 0;
+margin: 10px 0;
+transition: 0.2s;
+
+}
+section .Add-Info .forme .delete-button button{
+color: black;
+}
+section .Add-Info .forme .pageForm{
+background-color: rgb(238, 238, 240);
+width: 90%;
+height: 100%;
+margin: auto;
+padding: 1.7rem 1.5rem;
+}
+section .pageForm h4{
+   font-size: 20px;
+   padding-bottom: 0;
+   width: 250px;
+   letter-spacing: 1px;
+}
+/* 
+=====================================
+=====================================
+for enmiation
+=====================================
+=====================================
+*/
+
+
+@keyframes pulse-border {
+  0% { 
+    transform: scale(1); 
+    box-shadow: 0 0 0 0px rgba(14, 243, 33, 0.7); 
+  }
+  70% { 
+    transform: scale(1.05); 
+    box-shadow: 0 0 0 15px rgba(14, 243, 33, 0); 
+  }
+  100% { 
+    transform: scale(1); 
+    box-shadow: 0 0 0 0px rgba(14, 243, 33, 0); 
+  }
+}
+
+.active-patient-avatar {
+  animation: pulse-border 2s infinite;
+  border-radius: 50%;
+}
+/* 
+=====================================
+=====================================
+for responsive screen size
+=====================================
+=====================================
+*/
+  @media (min-width: 1000px) {
+ section .Add-Info .forme{
+background-color: rgb(238, 238, 240);
+width: 50%;
+height: 95%;
+}
+}
+  @media (max-width: 1000px) {
+ section .Add-Info .forme{
+background-color: rgb(238, 238, 240);
+width: 70%;
+height: 80%;
+}
+}
+  @media (max-width: 600px) {
+ section .Add-Info .forme{
+background-color: rgb(238, 238, 240);
+width: 90%;
+height: 94%;
+};
+section{
+    margin-left: -32px;
+}
+}
+  @media (max-width: 870px) {
+section .left-section,
+section .center-section,
+section .right-section
+{
+ width: 100%;
+};
+section .left-section .left-sectionTitle,
+section .center-section .center-sectionTitle,
+section .right-section .right-sectionTitle{
+
+   width: 90%;
+
+}
+}
+
