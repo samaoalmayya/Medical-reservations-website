@@ -1,13 +1,38 @@
-.flex{
-    display: flex;
+.flex {
+  display: flex;
 }
-.border{
-    border: 1px solid red;
+.border {
+  border: 1px solid red;
 }
-section{
-    justify-content: space-between;
-     flex-wrap: wrap;
-   
+section {
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.dashboard-wrapper {
+  min-height: 100vh;
+  padding: 30px;
+  background: linear-gradient(
+    135deg,
+    rgba(235, 242, 255, 0.75),
+    rgba(245, 248, 255, 0.55)
+  );
+}
+
+.dashboard-content {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+  width: 100%;
+  padding: 25px;
+
+  background: rgba(162, 211, 240, 0.479);
+  border: 1px solid rgba(161, 198, 199, 0.788);
+  border-radius: 24px;
+
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.06);
+
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
 }
 /* 
 =====================================
@@ -18,27 +43,23 @@ start  section
 */
 section .left-section,
 section .center-section,
-section .right-section
-{
-    margin-left: 1.5rem;
- 
-   
-
+section .right-section {
+  margin-left: 1.5rem;
 }
 section .left-section .left-sectionTitle,
 section .center-section .center-sectionTitle,
-section .right-section .right-sectionTitle{
-   margin: 1.47rem;
-   gap: 20px;
-   width: 300px;
-   height: 40px;
-   align-items: center;
-   background: #61606046;
-   justify-content: center;
-   border-radius: 5px;
+section .right-section .right-sectionTitle {
+  margin: 1.47rem;
+  gap: 20px;
+  width: 300px;
+  height: 40px;
+  align-items: center;
+  background: #61606046;
+  justify-content: center;
+  border-radius: 5px;
 }
-section .left-section .Title{
-   font-size:20px ;
+section .left-section .Title {
+  font-size: 20px;
 }
 /* 
 =====================================
@@ -47,15 +68,12 @@ start  section
 =====================================
 =====================================
 */
-section .center-section .center-sectionTitle{
-     background:rgb(249 115 22);
-
+section .center-section .center-sectionTitle {
+  background: rgb(249 115 22);
 }
-section .right-section .right-sectionTitle{
-     background:rgb(34 197 94);
-
+section .right-section .right-sectionTitle {
+  background: rgb(34 197 94);
 }
-
 
 /* 
 =====================================
@@ -65,45 +83,43 @@ start  Add info
 =====================================
 */
 
-section .Add-Info{
-position: fixed;
-inset: 0;
-background-color: rgba(10, 10, 10, 0.74);
-padding-top: 5rem;
-z-index: 10001;
+section .Add-Info {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(10, 10, 10, 0.74);
+  padding-top: 5rem;
+  z-index: 10001;
 }
-section .Add-Info .forme{
-background-color: rgb(238, 238, 240);
-width: 90%;
-height: 80%;
-margin: auto;
-border-radius: 20px;
-position: relative;
-transition: .2s;
-
+section .Add-Info .forme {
+  background-color: rgb(238, 238, 240);
+  width: 90%;
+  height: 80%;
+  margin: auto;
+  border-radius: 20px;
+  position: relative;
+  transition: 0.2s;
 }
-section .Add-Info .forme .delete-button{
-position: absolute;
-right: 0;
-margin: 10px 0;
-transition: 0.2s;
-
+section .Add-Info .forme .delete-button {
+  position: absolute;
+  right: 0;
+  margin: 10px 0;
+  transition: 0.2s;
 }
-section .Add-Info .forme .delete-button button{
-color: black;
+section .Add-Info .forme .delete-button button {
+  color: black;
 }
-section .Add-Info .forme .pageForm{
-background-color: rgb(238, 238, 240);
-width: 90%;
-height: 100%;
-margin: auto;
-padding: 1.7rem 1.5rem;
+section .Add-Info .forme .pageForm {
+  background-color: rgb(238, 238, 240);
+  width: 90%;
+  height: 100%;
+  margin: auto;
+  padding: 1.7rem 1.5rem;
 }
-section .pageForm h4{
-   font-size: 20px;
-   padding-bottom: 0;
-   width: 250px;
-   letter-spacing: 1px;
+section .pageForm h4 {
+  font-size: 20px;
+  padding-bottom: 0;
+  width: 250px;
+  letter-spacing: 1px;
 }
 /* 
 =====================================
@@ -113,19 +129,18 @@ for enmiation
 =====================================
 */
 
-
 @keyframes pulse-border {
-  0% { 
-    transform: scale(1); 
-    box-shadow: 0 0 0 0px rgba(14, 243, 33, 0.7); 
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0px rgba(14, 243, 33, 0.7);
   }
-  70% { 
-    transform: scale(1.05); 
-    box-shadow: 0 0 0 15px rgba(14, 243, 33, 0); 
+  70% {
+    transform: scale(1.05);
+    box-shadow: 0 0 0 15px rgba(14, 243, 33, 0);
   }
-  100% { 
-    transform: scale(1); 
-    box-shadow: 0 0 0 0px rgba(14, 243, 33, 0); 
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0px rgba(14, 243, 33, 0);
   }
 }
 
@@ -140,43 +155,46 @@ for responsive screen size
 =====================================
 =====================================
 */
-  @media (min-width: 1000px) {
- section .Add-Info .forme{
-background-color: rgb(238, 238, 240);
-width: 50%;
-height: 95%;
+@media (min-width: 1000px) {
+  section .Add-Info .forme {
+    background-color: rgb(238, 238, 240);
+    width: 50%;
+    height: 95%;
+  }
 }
+@media (max-width: 1000px) {
+  section .Add-Info .forme {
+    background-color: rgb(238, 238, 240);
+    width: 70%;
+    height: 90%;
+  }
 }
-  @media (max-width: 1000px) {
- section .Add-Info .forme{
-background-color: rgb(238, 238, 240);
-width: 70%;
-height: 80%;
+@media (max-width: 600px) {
+  section .Add-Info .forme {
+    background-color: rgb(238, 238, 240);
+    width: 90%;
+    height: 100%;
+  }
 }
+@media (max-width: 500px) {
+  section .Add-Info .forme {
+    background-color: rgb(238, 238, 240);
+    width: 90%;
+    height: 60%;
+  }
 }
-  @media (max-width: 600px) {
- section .Add-Info .forme{
-background-color: rgb(238, 238, 240);
-width: 90%;
-height: 94%;
-};
-section{
-    margin-left: -32px;
+@media (max-width: 1200px) {
+  section .left-section,
+  section .center-section,
+  section .right-section {
+    width: 100%;
+  }
+  .dashboard-content {
+    grid-template-columns: 1fr;
+  }
+  section .left-section .left-sectionTitle,
+  section .center-section .center-sectionTitle,
+  section .right-section .right-sectionTitle {
+    width: 90%;
+  }
 }
-}
-  @media (max-width: 870px) {
-section .left-section,
-section .center-section,
-section .right-section
-{
- width: 100%;
-};
-section .left-section .left-sectionTitle,
-section .center-section .center-sectionTitle,
-section .right-section .right-sectionTitle{
-
-   width: 90%;
-
-}
-}
-
